@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "sphinx_coderefinery_branding"
+
+[project]
+name = "sphinx-coderefinery-branding"
+authors = [{name = "Richard Darst"}]
+readme = "README.rst"
+#license = {file = "LICENSE"}
+keywords = ['sphinx-extension']
+# https://pypi.org/classifiers/
+classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Development Status :: 3 - Alpha",
+        "Framework :: Sphinx",
+        "Framework :: Sphinx :: Extension",
+   ]
+requires-python = ">=3.3"
+dynamic = ["version", "description"]
+#dependencies = [
+#    # FIXME
+#    "pyyaml",
+#]
+
+#[project.optional-dependencies]
+#test = [
+#    # FIXME
+#    "pytest",
+#]
+
+[project.urls]
+Repository = "https://github.com/coderefinery/sphinx-coderefinery-branding"
+#Documentation = "https://example.com/"
+
