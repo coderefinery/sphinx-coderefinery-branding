@@ -1,3 +1,5 @@
+"""Local branding module for CodeRefinery Sphinx projects
+"""
 from os import environ
 from os.path import abspath, join, dirname
 
@@ -14,6 +16,8 @@ def setup(app):
     if (environ.get('GITHUB_REPOSITORY', '').lower().startswith('coderefinery')
           or 'CODEREFINERY' in environ):
         app.connect('config-inited', config_hook)
+        app.setup_extension('sphinx_plausible')
+        app.config.plausible_domain = 'coderefinery.github.io'
 
     return {
         'version': __version__,
